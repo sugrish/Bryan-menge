@@ -5,7 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href=".login_page.css" rel="stylesheet">
+    <style>
+         body {
+            /* A smooth gradient background */
+           background-color: #4158D0;
+        background-image: 
+        radial-gradient(at 0% 0%, rgba(255, 12, 222, 0.5) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(33, 212, 253, 0.5) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(255, 122, 0, 0.5) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(0, 255, 119, 0.5) 0px, transparent 50%);
+        background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+            display: flex;
+        }
+ button {
+            background-color: blanchedalmond;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+button:hover {
+            background: rgb(46, 3, 3);
+            font-family: 'Times New Roman', Times, serif;
+            color: #f10303;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(241, 3, 3, 0.4);
+        }
+div {
+            display: flex;
+            font-family: 'Times New Roman', Times, serif;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            height: auto; 
+            width: 60%;
+            padding: 10px;
+            color: antiquewhite;
+        }
+.centered-div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.15); /* Slightly more opaque */
+            backdrop-filter: blur(15px);           /* Stronger blur for colorful backgrounds */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            color: white;
+            height: auto; /* Changed to auto so content fits with Bootstrap spacing */
+            min-height: 550px;
+            width: 400px; 
+            max-width: 90%; 
+            padding: 30px;
+            margin: 20px;
+        }
+input[type="text"], input[type="date"], input[type="email"] {
+            background-color: #4a4e69;
+            color: beige;
+            width: 100%;
+            border-radius: 8px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+.submit-btn {
+            background-color: blanchedalmond;
+            color: #333;
+            font-weight: bold;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            width: 100%;
+        }
+.radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+@media(width<599px){
+    body{
+        background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+    }
+   input[type="text"], input[type="date"], input[type="email"] {
+        /* This creates a 'frosted dark glass' look that matches the vibe */
+        background: rgba(0, 0, 0, 0.2); 
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        backdrop-filter: blur(5px);
+   }
+}
+@media(599 <= width <= 1000px){
+    body{
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    }
+   input[type="text"], input[type="date"], input[type="email"] {
+    /* Use a semi-transparent dark fill instead of a solid gradient */
+    background: rgba(0, 0, 0, 0.25); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white; /* Now perfectly readable across the whole box */
+    backdrop-filter: blur(10px); /* This makes it look like frosted glass */
+    padding: 10px;}
+}
+@media(width>1000px){
+    body {
+        /* A slightly darker version of the main gradient */
+        background: linear-gradient(135deg, #432371 0%, #faae7b 100%);
+    }
+    input[type="text"], input[type="date"], input[type="email"] {
+        /* Solid dark background with high transparency so it stays readable */
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+    }
+}
+    </style>
 </head>
 <body onclick="document.getElementById('bgMusic').play()">
     <div class="container-fluid">
